@@ -114,10 +114,6 @@ function App() {
     },
   ];
 
-  function copyToClipboard(entryText) {
-    navigator.clipboard.writeText(entryText);
-  }
-
   const getAllMessages = async () => {
     console.log("getAllMessages");
     try {
@@ -258,6 +254,7 @@ function App() {
    */
   useEffect(() => {
     checkIfWalletIsConnected();
+    //eslint-disable-next-line
   }, []);
 
   return (
