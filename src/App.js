@@ -272,13 +272,48 @@ function App() {
     >
       <header
         className='App-header'
-        style={{ padding: "42px", maxWidth: "500px" }}
+        style={{ padding: "42px", maxWidth: "550px" }}
       >
         {/* <img
           alt='profile'
           style={{ height: "125px", width: "125px", margin: "4px 8px" }}
           src='https://user-images.githubusercontent.com/55942632/144991723-738656d6-2111-4714-8d3d-53da18ea7693.png'
         /> */}
+        <a
+          href='https://github.com/theindianappguy/ama-web3-portal'
+          target='_blank'
+          rel='noreferrer'
+          style={{
+            display: "flex",
+            alignItems: "center",
+            color: "#fff",
+            backgroundColor: "#000",
+            borderRadius: "24px",
+            padding: "8px 16px",
+            textDecoration: "none",
+            fontSize: "16px",
+            margin: "8px",
+            fontWeight: "600",
+          }}
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='icon icon-tabler icon-tabler-brand-github'
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            stroke-width='2'
+            stroke='currentColor'
+            fill='none'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            style={{ marginRight: "12px" }}
+          >
+            <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+            <path d='M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5'></path>
+          </svg>
+          Github
+        </a>
         <h1 style={{ margin: "4px 8px", color: "#001858" }}>Send a message</h1>
         <p
           style={{
@@ -287,9 +322,9 @@ function App() {
             fontSize: "18px",
           }}
         >
-          Send <a href='https://twitter.com/indianappguy'>Sanskar</a> a public
-          message on the blockchain and you will have a chance at winning some
-          ETH!
+          Send <a href='https://twitter.com/indianappguy'>Sanskar</a>{" "}
+          <span>👋</span> a public message on the blockchain and you will have a
+          chance at winning some ETH!
         </p>
 
         <div style={{ display: "flex", alignItems: "center" }}>
@@ -415,9 +450,11 @@ function App() {
                   borderRadius: "8px",
                   borderTopLeftRadius: "0px",
                   textAlign: "left",
+                  fontSize: "16px",
+                  fontWeight: "600",
                 }}
               >
-                Message: {message.message}
+                {message.message}
               </p>
             </div>
           );
