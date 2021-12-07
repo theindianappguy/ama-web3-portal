@@ -8,11 +8,11 @@ function App() {
    * All state property to store all waves
    */
   const [allMessages, setAllMessages] = useState([]);
-  const contractAddress = "0x2c15BC3276B2315417380eAeea5b2E5EFc04A99a";
+  const contractAddress = "0xCA663eeE35D48B8de73958CEbdc54922C9f7d8BB";
   const contractABI = [
     {
       inputs: [],
-      stateMutability: "nonpayable",
+      stateMutability: "payable",
       type: "constructor",
     },
     {
@@ -241,6 +241,11 @@ function App() {
 
         count = await messagePortalContract.getTotalMessages();
         console.log("Retrieved total message count...", count.toNumber());
+
+        // once message is added update ui and remove the message from the input
+        document.getElementById("username").value = "";
+        document.getElementById("message").value = "";
+        getAllMessages();
       } else {
         console.log("Ethereum object doesn't exist!");
       }
@@ -442,13 +447,11 @@ function App() {
                 style={{
                   minWidth: "100%",
                   backgroundColor: "#f3d2c1",
-                  padding: "16px",
+                  padding: "16px 24px",
                   margin: "16px 0px",
-                  borderRadius: "8px",
-                  borderTopLeftRadius: "0px",
+                  borderRadius: "0px 24px 24px",
                   textAlign: "left",
                   fontSize: "16px",
-                  fontWeight: "600",
                 }}
               >
                 {message.message}
