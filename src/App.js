@@ -8,7 +8,7 @@ function App() {
    * All state property to store all waves
    */
   const [allMessages, setAllMessages] = useState([]);
-  const contractAddress = "0xCA663eeE35D48B8de73958CEbdc54922C9f7d8BB";
+  const contractAddress = "0x6a448CB9ca34d9259c3BD02A489F8715dBc6cDE9";
   const contractABI = [
     {
       inputs: [],
@@ -84,6 +84,25 @@ function App() {
     {
       inputs: [],
       name: "getTotalMessages",
+      outputs: [
+        {
+          internalType: "uint256",
+          name: "",
+          type: "uint256",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "",
+          type: "address",
+        },
+      ],
+      name: "lastWavedAt",
       outputs: [
         {
           internalType: "uint256",
